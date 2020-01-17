@@ -10,12 +10,32 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    
+
 
 </head>
 
 <body>
     <div class='container'>
+        <div class="modal fade" id="friend-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Your Closest Friend Match!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id='friend-info'>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <h1>Survey Questions!</h1>
         <form>
 
@@ -32,17 +52,17 @@
         </form>
 
         <p>Please Answer all of the following questions and as truthfully as possible!</p>
-
+        <p> Answers are in the range 1 (Strongly Disagree) to 5 (Strongly Agree)</p>
         <h3>Question 1</h3>
         <p>You have a knack for reading someone's emotions.</p>
         <div class="form-group">
             <label for="q1">Choose one:</label>
             <select class="form-control" id="q1">
-                <option>1 (Strongly Disagree)</option>
+                <option>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5 (Strongly Agree)</option>
+                <option>5</option>
             </select>
         </div>
         <h3>Question 2</h3>
@@ -50,11 +70,11 @@
         <div class="form-group">
             <label for="q2">Choose one:</label>
             <select class="form-control" id="q2">
-                <option>1 (Strongly Disagree)</option>
+                <option>1 </option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5 (Strongly Agree)</option>
+                <option>5</option>
             </select>
         </div>
         <h3>Question 3</h3>
@@ -62,11 +82,11 @@
         <div class="form-group">
             <label for="q3">Choose one:</label>
             <select class="form-control" id="q3">
-                <option>1 (Strongly Disagree)</option>
+                <option>1 </option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5 (Strongly Agree)</option>
+                <option>5</option>
             </select>
         </div>
         <h3>Question 4</h3>
@@ -74,11 +94,11 @@
         <div class="form-group">
             <label for="q4">Choose one:</label>
             <select class="form-control" id="q4">
-                <option>1 (Strongly Disagree)</option>
+                <option>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5 (Strongly Agree)</option>
+                <option>5</option>
             </select>
         </div>
         <h3>Question 5</h3>
@@ -86,11 +106,11 @@
         <div class="form-group">
             <label for="q5">Choose one:</label>
             <select class="form-control" id="q5">
-                <option>1 (Strongly Disagree)</option>
+                <option>1 </option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5 (Strongly Agree)</option>
+                <option>5</option>
             </select>
         </div>
         <h3>Question 6</h3>
@@ -98,11 +118,11 @@
         <div class="form-group">
             <label for="q6">Choose one:</label>
             <select class="form-control" id="q6">
-                <option>1 (Strongly Disagree)</option>
+                <option>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5 (Strongly Agree)</option>
+                <option>5</option>
             </select>
         </div>
         <h3>Question 7</h3>
@@ -110,11 +130,11 @@
         <div class="form-group">
             <label for="q7">Choose one:</label>
             <select class="form-control" id="q7">
-                <option>1 (Strongly Disagree)</option>
+                <option>1 </option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5 (Strongly Agree)</option>
+                <option>5</option>
             </select>
         </div>
         <h3>Question 8</h3>
@@ -122,11 +142,11 @@
         <div class="form-group">
             <label for="q8">Choose one:</label>
             <select class="form-control" id="q8">
-                <option>1 (Strongly Disagree)</option>
+                <option>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5 (Strongly Agree)</option>
+                <option>5</option>
             </select>
         </div>
         <h3>Question 9</h3>
@@ -134,11 +154,11 @@
         <div class="form-group">
             <label for="q9">Choose one:</label>
             <select class="form-control" id="q9">
-                <option>1 (Strongly Disagree)</option>
+                <option>1 </option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5 (Strongly Agree)</option>
+                <option>5 </option>
             </select>
         </div>
         <h3>Question 10</h3>
@@ -146,44 +166,57 @@
         <div class="form-group">
             <label for="q10">Choose one:</label>
             <select class="form-control" id="q10">
-                <option>1 (Strongly Disagree)</option>
+                <option>1 </option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5 (Strongly Agree)</option>
+                <option>5</option>
             </select>
         </div>
 
 
-        <button class="btn btn-primary sub-btn">Submit</button>
+        <button class="btn btn-primary sub-btn" data-toggle="modal" data-target='#friend-modal'>Submit</button>
     </div>
 
     <script>
-        $(document).ready(function(){
-            var data = [];
-            var inputObj = {};
-            var scores = [];
+        $(document).ready(function () {
+            //Submit button will trigger the modal and the post request
             $('.sub-btn').on('click', function (event) {
-        
+                var data = [];
+                var inputObj = {};
+                var scores = [];
                 inputObj["name"] = $('#name').val().trim()
                 inputObj["imageLink"] = $('#link-img').val().trim();
                 for (var i = 0; i < 10; i++) {
-                    var res = $(`#q${i}`).val()
+                    var res = $(`#q${i+1}`).val()
                     scores.push(res);
                 }
                 inputObj["scores"] = scores;
                 data.push(inputObj);
-                $.post("/api/friends", inputObj);
-                
-                console.log('submitted');
-        
-        
+                console.log(data);
+                $.post("/api/friends", inputObj).then(data => {
+                    //Display the name and image of closest friend in the modal!
+                    $('#friend-info').html(
+                        `<p> Name of your new friend: ${data.name}
+                             <br>   
+                             Here they are!
+                             <br>
+                             <img src="${data.imageLink}">`
+                    )
+
+
+
+                })
+
+                $('#name').val("");
+                $('#link-img').val("");
+
+
             })
         })
-            
 
 
-</script>
+    </script>
 
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
